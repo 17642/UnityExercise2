@@ -23,8 +23,8 @@ public class MoveObject : MonoBehaviour
         //transform.Translate(vec);
 
         Vector3 vec = new Vector3(//키보드 입력을 통한 오브젝트 이동
-            Input.GetAxis("Horizontal"),
-            Input.GetAxis("Vertical"), 0);
+            Input.GetAxis("Horizontal")*Time.deltaTime,
+            Input.GetAxis("Vertical")*Time.deltaTime, 0);
         transform.Translate(vec);
     }
 }
